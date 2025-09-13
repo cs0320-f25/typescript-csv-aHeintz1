@@ -28,14 +28,15 @@ test("parseCSV yields only arrays", async () => {
 
 test("parseCSV keeps empty fields", async () => {
   const results = await parseCSV(EMPTY_CSV)
-    expect(results[0]).toEqual(["a", "", "b"])
-    expect(results[1]).toEqual(["1", "", "2"])
+  //keep the empty fields
+    expect(results[0]).toEqual(["a", "", "b"]) 
+    expect(results[1]).toEqual(["1", "", "2"]) 
 });
 
 test("parseCSV incorrect splits fields ", async () => {
   const results = await parseCSV(BAD_FIELDS_CSV)
-    expect(results[0]).not.toEqual(["last, first", "age"])
-    expect(results[0]).toEqual(["'last", "first'", "age"]) // broken on purpose
+    expect(results[0]).not.toEqual(["last, first", "age"]) 
+    expect(results[0]).toEqual(["'last", "first'", "age"])
 });
 
 // test("parseCSV  inconsistent row length", async () => {
@@ -48,6 +49,6 @@ test("parseCSV incorrect splits fields ", async () => {
 const PersonRowSchema = z.tuple([z.string(), z.coerce.number()]).transform( t => ({name: t[0], age: t[1]}))
 
 test("parseCSV returns schema", async () => {
-  const results = await parseCSV(ZOD_CSV_PATH, PersonRowSchema)
-    expect(results).toEqual([{name: "Alice", age: 23}, {name: "Charlie", age: 25}])
+  const results = await parseCSV(ZOD_CSV_PATH, PersonRowSchema) // use schema
+    expect(results).toEqual([{name: "Alice", age: 23}, {name: "Charlie", age: 25}]) //results have to equal these names and ages
 });

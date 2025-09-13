@@ -22,22 +22,21 @@ export async function parseCSV<T>(path: string, schema?: ZodType<T>): Promise<T[
     crlfDelay: Infinity,
   });
 
-  // Use a more specific type for the result array
   const result: T[] | string[][] = schema ? [] : [];
 
   for await (const line of rl) {
-    const values = line.split(",").map((v) => v.trim());
+    const values = line.split(",").map((v) => v.trim()); // cut whitespace
     if (schema) {
-      const parsed = schema.safeParse(values);
+      const parsed = schema.safeParse(values); // validate against schema
       if (parsed.success) {
-        (result as T[]).push(parsed.data);
+        (result as T[]).push(parsed.data); // if valid push parsed data
       } else {
         throw new Error(
-          `Schema validation failed for line: "${line}". Error: ${parsed.error.message}`
+          `Schema validation failed for line: "${line}". Error: ${parsed.error.message}` // error message
         );
       }
     } else {
-      (result as string[][]).push(values);
+      (result as string[][]).push(values); // if no schema push strings
     }
   }
 
