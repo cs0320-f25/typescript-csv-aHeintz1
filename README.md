@@ -38,5 +38,5 @@ LLM suggeseted that large file streaming support, detailed parse errors, and to 
 #### Team members and contributions (include cs logins):
 
 #### Collaborators (cslogins of anyone you worked with on this project and/or generative AI):
-#### Total estimated time it took to complete project:
-#### Link to GitHub Repo:  
+#### Total estimated time it took to complete project:6 hours
+#### Link to GitHub Repo:  https://github.com/cs0320-f25/typescript-csv-aHeintz1.git
