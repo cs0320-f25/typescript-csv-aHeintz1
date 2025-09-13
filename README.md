@@ -17,14 +17,14 @@ LLM suggeseted that large file streaming support, detailed parse errors, and to 
     Include your notes from above: what were your initial ideas, what did the LLM suggest, and how did the results differ by prompt? What resonated with you, and what didn’t? (3-5 sentences.) 
 
     Functionality:
-    I think quoted fields with commas need to be handled be so last name, first name aren't in different fields. This idea came from me while looking at the csv file it is must need that names stay together, but reinforced by LLM
+    As a user I want quoted fields with commas to be formated so last name, first name aren't in different fields and remain the a single field. This ensures that names and other datas that split with a comma stay in the same field, which is needed to keep the integrety of the data. This idea came from me while looking at the csv file it is must need that names stay together, but reinforced by LLM. 
 
-    Another crucial need for the csv file is for the colums to be consistent so data wont be misaligned and make the csv file incorrect. This idea what thought about by me. We have to make sure that the data that was inputted into the file keeps with the same data
+    As a user a crucial need for me to have a good CSV file is for the colums to be consistent so the data wont be misaligned and make the csv file incorrect. This idea what thought about by me when thinking how I can make sure that the data is kept true. 
 
     Extensibility:
-    For the csv we need to tell the parser whether the first row contains headers so the rest of the data falls into place correctly. This was thought about by LLM. This will keep the CSV file from being incorrect
+    As a user I need the parser to know whether the first row contains headers so the rest of the data falls into place correctly. Having the data in the right place will help me find all the data in the same field instead of it getting misplaced. This was though of by the LLM
 
-    Having the error objects instead of console logs will handle malformed rows smoother. This was thought of by the LLM. It leaned towards edge cases but really emphasized ease of use. Having this will drastically improve unsability    
+    As a user I want errors to be returned as structured error objects instead of console logs so that everything runs smoother. This improves usability by allowing me to capture the error, inspecte it and respond. This was thought of by the LLM. It leaned towards edge cases but really emphasized ease of use.
 
 ### Design Choices
 
