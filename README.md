@@ -12,10 +12,6 @@ LLM suggeseted that large file streaming support, detailed parse errors, and to 
 
 - #### Step 3: use an LLM to help expand your perspective.
 
-    Include a list of the top 4 enhancements or edge cases you think are most valuable to explore in the next week’s sprint. Label them clearly by category (extensibility vs. functionality), and include whether they came from you, the LLM, or both. Describe these using the User Story format—see below for a definition. 
-
-    Include your notes from above: what were your initial ideas, what did the LLM suggest, and how did the results differ by prompt? What resonated with you, and what didn’t? (3-5 sentences.) 
-
     Functionality:
     As a user I want quoted fields with commas to be formated so last name, first name aren't in different fields and remain the a single field. This ensures that names and other datas that split with a comma stay in the same field, which is needed to keep the integrety of the data. This idea came from me while looking at the csv file it is must need that names stay together, but reinforced by LLM. 
 
