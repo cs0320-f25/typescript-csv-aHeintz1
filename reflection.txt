@@ -1,0 +1,22 @@
+A CSV parser is correct when it produces correct data is the right spot.
+For example, each row in a CSV should be able to be mapped to only one 
+row in the output. The number of cells in each rows should be there even 
+if they are blank. the parser should also be able to find malformed rows.
+these are a couple example of a parser being correct. As long as the parcer
+is keeping the CSV file data true with all the correct structre then it should
+be fine.
+
+With a random CSV On-Demand generation I would be able to test the parser
+against a big veriety. This would include things I think about, but also things 
+that I wouldn't. For example, it would be able to priduce rows with different
+numbers of columns, quoted values with commas, or many others. It would also be 
+able to check edge cases and run different tests with objectives I wouldn't think
+about. The On-Demand generation would make the parser much better by including the 
+tests I think of but others that I dont. 
+
+Doing the sprint was something different compared to other CS classes I have taken.
+Using type script is something I have never done, so getting use to the new language 
+was different and challenging. There were some bugs on the way, some of my tests didn't
+work at first, but then after some brain storming I got it to work. One thing that is 
+new about this course compared to others is the commiting code to github while you are 
+doing the assignment and not after. This was one thing I forgot todo. 
